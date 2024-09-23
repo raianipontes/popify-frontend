@@ -6,7 +6,7 @@ const ChatWindow = () => {
     const [input, setInput] = useState('');
 
     const fetchMessages = async () => {
-        const response = await fetch('http://127.0.0.1:8000/messages/');
+        const response = await fetch('https://popify-backend-production.up.railway.app/messages/');
         const data = await response.json();
         const mappedMessages = data.map((msg: { content: string; sender: string }) => ({
             content: msg.content,
@@ -22,7 +22,7 @@ const ChatWindow = () => {
         if (input.trim()) {
             const newMessageToSend = { message: input, sender: 'user' };
             const newMessage = { content: input, sender: 'user' };
-            await fetch('http://127.0.0.1:8000/messages/', {
+            await fetch('https://popify-backend-production.up.railway.app/messages/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
