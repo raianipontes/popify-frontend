@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+## Sobre 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Popify** é um chatbot de música pop estadunidense 🎶. Ele foi desenvolvido para fornecer informações sobre artistas americanos do gênero pop, abrangendo os seguintes aspectos: biografias, músicas e álbuns. O frontend permite que os usuários interajam facilmente com o chatbot através de uma interface amigável e responsiva.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas 👩‍💻
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Linguagens**: TypeScript
+- **Frameworks**:
+  - **React**: Para construção da interface de usuário
+  - **Chakra UI**: Biblioteca de componentes para estilizar a interface de forma eficiente
+- **Ferramentas**:
+  - **Vite**: Ferramenta de build rápida para desenvolvimento React
 
-## Expanding the ESLint configuration
+## Pré-requisitos 📍
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Antes de iniciar o desenvolvimento ou rodar a aplicação, você precisará ter os seguintes softwares instalados:
 
-- Configure the top-level `parserOptions` property like this:
+- **Node.js** (versão 14.x ou superior)
+- **npm** ou **yarn** (para gerenciar pacotes)
+- **Git** para clonar o repositório
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Execução do front-end 🖱️
+Para a execução da parte visual do site você deve rodar o seguinte comando:
+```bash
+npm run dev
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Backend 🖥️
+O backend do projeto está disponível no repositório: https://github.com/raianipontes/popify-backend
